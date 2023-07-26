@@ -11,7 +11,7 @@ import "./index.css";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: <Picker />,
   },
   {
     path: "/list",
@@ -27,7 +27,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/picker",
-    element: <Picker />,
+    element: <Home />,
   },
 ]);
 

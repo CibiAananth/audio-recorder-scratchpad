@@ -27,6 +27,15 @@ export function LoginForm(): React.ReactNode {
     console.log(data, error);
   };
 
+  useEffect(() => {
+    const a = async () => {
+      const user = await supabase.auth.getUser();
+      const session = await supabase.auth.getSession();
+      console.log(session.data, user.data);
+    };
+    a();
+  }, []);
+
   async function handleLogout() {
     const data = await supabase.auth.signOut();
     console.log(data);
